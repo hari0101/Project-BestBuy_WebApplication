@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="AccountRegistration">
+  
+ <test name="ChromebrowserTest"> <!-- CreateAccount Chrome -->
+   	<parameter name="OS" value="Windows"></parameter>
+   	<parameter name="Browser" value="Chrome"></parameter>
+   	
+    <classes>
+      <class name="testExecution.TC001_TC009_CreateAnAccount"/>
+    </classes>
+  </test> 
+
+<test name="EdgebrowserTest"> <!-- CreateAccount Edge -->
+   	<parameter name="OS" value="Windows"></parameter>
+   	<parameter name="Browser" value="Edge"></parameter>
+   	
+    <classes>
+      <class name="testExecution.TC001_TC009_CreateAnAccount"/>
+    </classes>
+  </test> 
+
+<test name="FirefoxbrowserTest"> <!-- CreateAccount Firefox-->
+   	<parameter name="OS" value="Windows"></parameter>
+   	<parameter name="Browser" value="Firefox"></parameter>
+   	
+    <classes>
+      <class name="testExecution.TC001_TC009_CreateAnAccount"/>
+    </classes>
+  </test> 
+
+</suite> <!-- AccountRegistration -->

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="AccountRegistration" verbose="5">
+	
+<!--  <listeners>
+		<listener class-name="listeners.TestListener"></listener>
+	</listeners> -->
+	
+  <test name="CreateAccountMavenTest">
+   	<parameter name="Machine" value="Localhost"></parameter>
+   	<parameter name="OS" value="Windows"></parameter>
+   	<parameter name="Browser" value="Chrome"></parameter>
+	
+	<groups>
+		<run>
+			<include name="Driver_checkin"></include>	
+			<exclude name="Driver_checkout"></exclude>	
+			<include name="maventest"></include>
+		</run>
+	</groups>
+    
+    <classes>
+     <class name="testExecution.CreateAnAccountTest"/> 
+      <class name="testExecution.SignInTest"></class>
+       <class name="testExecution.HomePageTest"></class>
+    </classes>
+  </test>
+
+<!-- <test name="SignInPageTestEdge">
+   	<parameter name="Machine" value="Localhost"></parameter>
+   	<parameter name="OS" value="Windows"></parameter>
+   	<parameter name="Browser" value="Edge"></parameter>
+	
+	<groups>
+		<run>
+			<include name="Driver_checkin"></include>	
+			<include name="Driver_checkout"></include>	
+			<include name="SanitySignIn"></include>
+		</run>
+	</groups>
+    
+    <classes>
+     <class name="testExecution.CreateAnAccountTest"/> 
+      <class name="testExecution.SignInTest"></class>
+    </classes>
+  </test>
+
+<test name="SignInPageTestFireFox">
+   	<parameter name="Machine" value="Localhost"></parameter>
+   	<parameter name="OS" value="Windows"></parameter>
+   	<parameter name="Browser" value="FireFox"></parameter>
+	
+	<groups>
+		<run>
+			<include name="Driver_checkin"></include>	
+			<include name="Driver_checkout"></include>	
+			<include name="SanitySignIn"></include>
+		</run>
+	</groups>
+    
+    <classes>
+     <class name="testExecution.CreateAnAccountTest"/> 
+      <class name="testExecution.SignInTest"></class>
+    </classes> 
+  </test> -->
+</suite> 

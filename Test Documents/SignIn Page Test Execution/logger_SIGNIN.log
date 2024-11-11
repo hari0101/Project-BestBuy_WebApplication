@@ -1,0 +1,18 @@
+2024-11-08 10:48:23 [main] INFO  testExecution.BaseClass - Chrome Browser as Launched Successfully!.
+
+2024-11-08 10:48:40 [main] INFO  testExecution.BaseClass - Successfully navigated to the SignIn page!!
+
+2024-11-08 10:50:56 [main] INFO  testExecution.BaseClass - The Chrome Browser windows are closed!.
+
+2024-11-08 10:51:00 [main] INFO  testExecution.BaseClass - Edge Browser as Launched Successfully!.
+
+2024-11-08 10:51:18 [main] INFO  testExecution.BaseClass - Successfully navigated to the SignIn page!!
+
+2024-11-08 10:53:25 [main] INFO  testExecution.BaseClass - The Edge Browser windows are closed!.
+
+2024-11-08 10:53:31 [main] INFO  testExecution.BaseClass - FireFox Browser as Launched Successfully!.
+
+2024-11-08 10:53:46 [main] INFO  testExecution.BaseClass - Successfully navigated to the SignIn page!!
+
+2024-11-08 10:56:09 [main] INFO  testExecution.BaseClass - The FireFox Browser windows are closed!.
+

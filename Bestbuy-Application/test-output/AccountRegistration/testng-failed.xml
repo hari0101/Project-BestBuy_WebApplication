@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Failed suite [AccountRegistration]" guice-stage="DEVELOPMENT" verbose="5">
+  <test thread-count="3" name="SignInPageTestChrome(failed)" verbose="5">
+    <parameter name="OS" value="Windows"/>
+    <parameter name="Machine" value="Localhost"/>
+    <parameter name="Browser" value="Chrome"/>
+    <groups>
+      <run>
+        <include name="Driver_checkin"/>
+        <include name="cart"/>
+        <exclude name="Driver_checkout"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testExecution.HomePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="searchAddItemsCart"/>
+        </methods>
+      </class> <!-- testExecution.HomePageTest -->
+    </classes>
+  </test> <!-- SignInPageTestChrome(failed) -->
+</suite> <!-- Failed suite [AccountRegistration] -->
