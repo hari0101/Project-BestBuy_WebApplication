@@ -14,7 +14,7 @@ public class SignInTest extends BaseClass {
 	SignInPage signin;	
 	HomePage home;
 	
-	@Test(description = "Verify we can navigate to SignIn.", priority = 0, groups = {"SanitySignIn"})
+	@Test(description = "Verify we can navigate to SignIn.", priority = 0, groups = {"Smoke", "Sanity"})
 	public void signInPage_TC061() {
 		
 		home = new HomePage(driver);
@@ -30,7 +30,7 @@ public class SignInTest extends BaseClass {
 	}
 	
 	
-	@Test(description = "Verify user can SignIn to the BestBuy.", priority = 1, groups = {"SanitySignIn"})
+	@Test(description = "Verify user can SignIn to the BestBuy.", priority = 1, groups = {"Smoke", "Sanity"})
 	public void validateSignINInput_TC068_to_TC071() {
 		
 		signin = new SignInPage(driver);
@@ -55,7 +55,7 @@ public class SignInTest extends BaseClass {
 		
 	}
 	@Test(dataProvider ="SignIn_Account_Invalid_Input", dataProviderClass = utilities.DataProviders.class, 
-			description = "Verify user cannot SignIn to the BestBuy.", priority = 2, groups = {"SanitySignIn"})
+			description = "Verify user cannot SignIn to the BestBuy.", priority = 2, groups = {"Smoke", "Sanity"})
 	public void invalidateSignInInput_TC072_to_TC077(String emailAddress, String password) {
 		
 		signin = new SignInPage(driver);
@@ -80,7 +80,7 @@ public class SignInTest extends BaseClass {
 		
 	}
 	
-	@Test(description = "Verify user can SignIn to the BestBuy.", priority = 3, groups = {"SanitySignIn"})
+	@Test(description = "Verify user can SignIn to the BestBuy.", priority = 3, groups = {"Smoke", "Sanity"})
 	public void agreementBestbuy_TC085_to_TC087() {
 		
 		//Getting the parent window
@@ -111,7 +111,7 @@ public class SignInTest extends BaseClass {
 		
 	}
 	
-	@Test(description = "Verify user can SignIn to the BestBuy.", priority = 4, groups = {"SanitySignIn"})
+	@Test(description = "Verify user can SignIn to the BestBuy.", priority = 4, groups = {"Smoke", "Sanity"})
 	public void redirectToCreateAccount_TC092_to_TC094() {
 		
 		//Enters the Valid details in the SignIn page and click enter.
@@ -136,7 +136,7 @@ public class SignInTest extends BaseClass {
 		
 		
 	}
-	@Test(description = "Verify user can SignIn to the BestBuy.", priority = 5, groups = {"SanitySignIn"})
+	@Test(description = "Verify user can SignIn to the BestBuy.", priority = 5, groups = {"Smoke", "Sanity"})
 	public void footerLinks_TC095_TC101() {
 		
 		signin = new SignInPage(driver);

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="AccountRegistration" verbose="5">
+<suite thread-count="3" name="AccountRegistration" parallel="tests" verbose="5">
 	
-<!--  <listeners>
+	 <listeners>
 		<listener class-name="listeners.TestListener"></listener>
-	</listeners> -->
+		<listener class-name="listeners.RetryIAnnotation"></listener>
+	</listeners> 
 	
   <test name="CreateAccountMavenTest">
    	<parameter name="Machine" value="Localhost"></parameter>
@@ -14,19 +15,20 @@
 	<groups>
 		<run>
 			<include name="Driver_checkin"></include>	
-			<exclude name="Driver_checkout"></exclude>	
-			<include name="maventest"></include>
+			<include name="Driver_checkout"></include>	
+			<include name="Smoke"></include>
+			<include name="Sanity"></include>
 		</run>
 	</groups>
     
     <classes>
      <class name="testExecution.CreateAnAccountTest"/> 
       <class name="testExecution.SignInTest"></class>
-       <class name="testExecution.HomePageTest"></class>
+      <class name="testExecution.HomePageTest"></class>
     </classes>
   </test>
 
-<!-- <test name="SignInPageTestEdge">
+	 <test name="SignInPageTestEdge">
    	<parameter name="Machine" value="Localhost"></parameter>
    	<parameter name="OS" value="Windows"></parameter>
    	<parameter name="Browser" value="Edge"></parameter>
@@ -35,13 +37,15 @@
 		<run>
 			<include name="Driver_checkin"></include>	
 			<include name="Driver_checkout"></include>	
-			<include name="SanitySignIn"></include>
+			<include name="Smoke"></include>
+			<include name="Sanity"></include>
 		</run>
 	</groups>
     
     <classes>
      <class name="testExecution.CreateAnAccountTest"/> 
       <class name="testExecution.SignInTest"></class>
+      <class name="testExecution.HomePageTest"></class>
     </classes>
   </test>
 
@@ -54,13 +58,15 @@
 		<run>
 			<include name="Driver_checkin"></include>	
 			<include name="Driver_checkout"></include>	
-			<include name="SanitySignIn"></include>
+			<include name="Smoke"></include>
+			<include name="Sanity"></include>
 		</run>
 	</groups>
     
     <classes>
      <class name="testExecution.CreateAnAccountTest"/> 
       <class name="testExecution.SignInTest"></class>
+      <class name="testExecution.HomePageTest"></class>
     </classes> 
-  </test> -->
+  </test> 
 </suite> 

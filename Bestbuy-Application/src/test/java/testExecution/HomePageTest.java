@@ -23,7 +23,7 @@ public class HomePageTest extends BaseClass {
 
 	HomePage home;
 	
-	@Test(description = "Verify the Broken URL in Homepage.", priority = 0, groups = {"null"})
+	@Test(description = "Verify the Broken URL in Homepage.", priority = 0, groups = {"Smoke", "Sanity"})
 	public void brokenURLHomepage_TC102_to_TC103() {
 		
 		 
@@ -66,7 +66,7 @@ public class HomePageTest extends BaseClass {
 		 }
 	
 	}
-		 @Test(description = "Verify the below Order-Purchases Links in Homepage.", priority = 1, groups = {"bottom"})
+		 @Test(description = "Verify the below Order-Purchases Links in Homepage.", priority = 1, groups = {"Smoke", "Sanity"})
 			public void bottomOrderPurchasesLinks_TC104_to_TC110() {
 			 
 			 home = new HomePage(driver);
@@ -92,7 +92,7 @@ public class HomePageTest extends BaseClass {
 		 }
 		 
 		 @Test(description = "Verify user can search product and add to cart.", priority = 2, 
-				 groups = {"cart"})
+				 groups = {"Smoke", "Sanity"})
 		 public void searchAddItemsCart() {
 			 
 			 home = new HomePage(driver);

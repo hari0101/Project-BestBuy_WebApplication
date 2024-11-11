@@ -14,7 +14,7 @@ import pageObjectRepository.SignInPage;
 public class CreateAnAccountTest extends BaseClass {
 	
 	@Test(description = "Verify we can navigate to Create an Account.", 
-			priority = 0, groups = {"maventest"})
+			priority = 0, groups = {"Smoke"})
 	public void createAccountPage_TC001_TC009() {
 		
 		//Homepage Object
@@ -41,7 +41,7 @@ public class CreateAnAccountTest extends BaseClass {
 	}
 	
 		@Test(description = "Verify user can enter to input fields.", 
-				priority = 1, dependsOnMethods = {"createAccountPage_TC001_TC009"}, groups = {"smoketest"})
+				priority = 1, dependsOnMethods = {"createAccountPage_TC001_TC009"}, groups = {"Smoke"})
 		public void validInputFields_TC003_TC011() {
 			
 		CreateAccountPage createAcc = new CreateAccountPage(driver);
@@ -66,7 +66,7 @@ public class CreateAnAccountTest extends BaseClass {
 		}
 		
 		@Test(description = "Verify form should not create account with an Empty fields.", 
-				priority = 2, groups = {"Empty"})
+				priority = 2, groups = {"Smoke"})
 		public void emptyCredentials_TC013_to_TC018() {
 			
 			//Navigate to the Create Account page
@@ -89,7 +89,7 @@ public class CreateAnAccountTest extends BaseClass {
 		}	
 		
 		@Test(dataProvider = "Create_Account_Invalid_Input", dataProviderClass = utilities.DataProviders.class, description = "Verify the invalid credentials account should not created.", 
-				priority = 3, groups = {"invalid"})
+				priority = 3, groups = {"Smoke"})
 		public void invalidCredentials(String firstName, String lastname, String emailaddress, String password, String confirmpassword, String mobilenumber) {
 			
 			//Dataproviding method should be Alone no other this.(method_name) allowed it will interrupt.
@@ -108,7 +108,7 @@ public class CreateAnAccountTest extends BaseClass {
 		
 		
 		@Test(description = "Verify we can navigate to SignIn from Account page.", 
-				priority = 4, groups = {"sanity"})
+				priority = 4, groups = {"Smoke"})
 		public void navigateToSignIN_049_050() {
 			
 			driver.navigate().back();
@@ -126,7 +126,7 @@ public class CreateAnAccountTest extends BaseClass {
 		}
 		
 		@Test(description = "Verify we can go homepage by clicking on Logo and returnpage Links.", 
-				priority = 5, groups = {"logo"})
+				priority = 5, groups = {"Smoke"})
 		public void headerLinkToGetBack_TC056_TC058() {
 			
 			CreateAccountPage createAcc = new CreateAccountPage(driver);
@@ -149,7 +149,7 @@ public class CreateAnAccountTest extends BaseClass {
 		}
 		
 		@Test(description = "Verify navigate the agreement pages.", 
-				priority = 6, groups = {"Agreements"})
+				priority = 6, groups = {"Sanity"})
 		public void agreementsBestBuy_TC044_TC046() {
 			
 			//Getting the parent window
@@ -180,7 +180,7 @@ public class CreateAnAccountTest extends BaseClass {
 		}
 		
 		@Test(description = "Verify all placeholder text are valid.", 
-				priority = 7, groups = {"place"})
+				priority = 7, groups = {"Sanity"})
 		public void verifyAllPlaceHolder() {
 			
 			CreateAccountPage createAcc = new CreateAccountPage(driver);
@@ -208,7 +208,7 @@ public class CreateAnAccountTest extends BaseClass {
 		}
 		
 		@Test(description = "Verify all footer links navigate to page.", 
-				priority = 8, groups = {"footer"})
+				priority = 8, groups = {"Sanity"})
 		public void footerLinks() {
 			
 			CreateAccountPage createAcc = new CreateAccountPage(driver);
